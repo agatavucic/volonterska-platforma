@@ -1,4 +1,4 @@
-import { IsISO8601, IsOptional, IsString, Length } from 'class-validator';
+import { IsISO8601, IsOptional, IsString, Length, IsUUID } from 'class-validator';
 
 export class CreateActivityDto {
   @IsString() @Length(3, 120)
@@ -18,4 +18,7 @@ export class CreateActivityDto {
 
   @IsOptional() @IsString()
   category?: string;
+
+  @IsUUID()
+  organizationId: string;
 }

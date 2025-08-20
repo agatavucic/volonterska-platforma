@@ -18,6 +18,7 @@ class CreateActivityDto {
     startAt;
     endAt;
     category;
+    organizationId;
 }
 exports.CreateActivityDto = CreateActivityDto;
 __decorate([
@@ -46,4 +47,8 @@ __decorate([
     (0, class_validator_1.IsString)(),
     __metadata("design:type", String)
 ], CreateActivityDto.prototype, "category", void 0);
+__decorate([
+    (0, class_validator_1.IsUUID)(),
+    __metadata("design:type", String)
+], CreateActivityDto.prototype, "organizationId", void 0);
 //# sourceMappingURL=create-activity.dto.js.map

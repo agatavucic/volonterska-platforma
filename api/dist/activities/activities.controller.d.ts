@@ -4,47 +4,59 @@ import { UpdateActivityDto } from './dto/update-activity.dto';
 export declare class ActivitiesController {
     private readonly activitiesService;
     constructor(activitiesService: ActivitiesService);
-    create(dto: CreateActivityDto): {
-        id: string;
+    create(dto: CreateActivityDto): import("@prisma/client").Prisma.Prisma__ActivityClient<{
         title: string;
         description: string;
         city: string;
-        startAt: string;
-        endAt: string;
-        category?: string;
-        createdAt: string;
-    };
-    findAll(): {
+        startAt: Date;
+        endAt: Date;
+        category: string | null;
+        organizationId: string;
         id: string;
+        createdAt: Date;
+    }, never, import("@prisma/client/runtime/library").DefaultArgs, import("@prisma/client").Prisma.PrismaClientOptions>;
+    findAll(): import("@prisma/client").Prisma.PrismaPromise<{
         title: string;
         description: string;
         city: string;
-        startAt: string;
-        endAt: string;
-        category?: string;
-        createdAt: string;
-    }[];
-    findOne(id: string): {
+        startAt: Date;
+        endAt: Date;
+        category: string | null;
+        organizationId: string;
         id: string;
+        createdAt: Date;
+    }[]>;
+    findOne(id: string): Promise<{
         title: string;
         description: string;
         city: string;
-        startAt: string;
-        endAt: string;
-        category?: string;
-        createdAt: string;
-    };
-    update(id: string, dto: UpdateActivityDto): {
+        startAt: Date;
+        endAt: Date;
+        category: string | null;
+        organizationId: string;
         id: string;
+        createdAt: Date;
+    }>;
+    update(id: string, dto: UpdateActivityDto): Promise<{
         title: string;
         description: string;
         city: string;
-        startAt: string;
-        endAt: string;
-        category?: string;
-        createdAt: string;
-    };
-    remove(id: string): {
-        ok: boolean;
-    };
+        startAt: Date;
+        endAt: Date;
+        category: string | null;
+        organizationId: string;
+        id: string;
+        createdAt: Date;
+    }>;
+    remove(id: string): Promise<{
+        title: string;
+        description: string;
+        city: string;
+        startAt: Date;
+        endAt: Date;
+        category: string | null;
+        organizationId: string;
+        id: string;
+        createdAt: Date;
+    }>;
 }

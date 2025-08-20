@@ -5,4 +5,5 @@ export declare class CreateActivityDto {
     startAt: string;
     endAt: string;
     category?: string;
+    organizationId: string;
 }
